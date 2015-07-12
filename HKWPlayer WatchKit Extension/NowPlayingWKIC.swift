@@ -180,12 +180,12 @@ class NowPlayingWKIC: WKInterfaceController {
             println("INPUT: \(input)")
             var command = input[0] as! String
             command = command.lowercaseString
-            if command == "mute" {
+            if command == "mute" || command == "meet" {
                 self.premuteVolume = self.volume
                 self.volumeChanged(0)
                 self.isMuted = true
             }
-            else if command == "unmute" {
+            else if command == "unmute" || command == "on mute" {
                 self.volumeChanged(self.premuteVolume)
                 self.isMuted = false
             }
@@ -211,6 +211,39 @@ class NowPlayingWKIC: WKInterfaceController {
                 
                 self.playCurrentIndex()
             }
+            else if command == "track number one" {
+                g_currentIndex = 0
+                self.playItem = g_playList[g_currentIndex]
+                self.configureUI(self.playItem)
+                self.playCurrentIndex()
+            }
+            else if command == "track number two" {
+                g_currentIndex = 1
+                self.playItem = g_playList[g_currentIndex]
+                self.configureUI(self.playItem)
+                self.playCurrentIndex()
+            }
+            else if command == "track number three" {
+                g_currentIndex = 2
+                self.playItem = g_playList[g_currentIndex]
+                self.configureUI(self.playItem)
+                self.playCurrentIndex()
+            }
+            else if command == "track number four" {
+                g_currentIndex = 3
+                self.playItem = g_playList[g_currentIndex]
+                self.configureUI(self.playItem)
+                self.playCurrentIndex()
+            }
+//            else if command == "speaker number one" {
+////                WKInterfaceController.openParentApplication(["setActive": "2-1:true"], reply: {(reply, error) -> Void in
+//////                    if let eventCreated = reply["setActive"] as? NSNumber {
+//////
+//////                    }
+////                })
+//                HKWControlHandler.sharedInstance().addDeviceToSession(3)
+//                
+//            }
             
         }
     }

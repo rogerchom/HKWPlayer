@@ -165,9 +165,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, HKWDeviceEventHandlerDele
             println("setActive: str: \(str)")
             
             var valueArray = str.componentsSeparatedByString(":")
-            var deviceId: CLongLong = CLongLong(valueArray[0].toInt()!)
+            let value = valueArray[0]
+            var deviceId: CLongLong = 0
+            
+            // Lookup deviceId
+            if value == "2-1" {
+                deviceId = 95211106154672
+            }
+            else if value == "2-3" {
+                deviceId = 156783757310128
+            }
+            else if value == "2-4" {
+                deviceId = 123201424799920
+            }
+            
             let isActive = valueArray[1] == "true" ? true : false
             println("isActive: \(isActive)")
+            println("deviceId: \(deviceId)")
             
             if isActive {
                 HKWControlHandler.sharedInstance().addDeviceToSession(deviceId)
@@ -178,7 +192,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, HKWDeviceEventHandlerDele
             eventCreated = true
             reply(["setActive": NSNumber(bool: eventCreated)])
             
-        } else if let value = userInfo?["getElapsedTime"] as? NSNumber {
+        }else if let value = userInfo?["getElapsedTime"] as? NSNumber {
             println("getElapsedTime: return value: \(g_timeElapsed)")
             
             reply(["getElapsedTime": NSNumber(integer: g_timeElapsed)])
@@ -209,12 +223,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, HKWDeviceEventHandlerDele
             println("return : \(HKWControlHandler.sharedInstance().isPlaying())")
 
             reply(["getIsPlaying": NSNumber(bool: HKWControlHandler.sharedInstance().isPlaying())])
+        }  else if let value = userInfo?["playBark"] as? NSString {
+            
         }
 
         
     }
 
-
+    func convertStringToCLongLong(deviceIDStr: String) -> CLongLong {
+        let strAsNSString = deviceIDStr as NSString
+        let deviceID = strAsNSString.longLongValue
+        let uDeviceID = CLongLong(deviceID)
+        return uDeviceID
+    }
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

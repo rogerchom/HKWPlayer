@@ -235,15 +235,54 @@ class NowPlayingWKIC: WKInterfaceController {
                 self.configureUI(self.playItem)
                 self.playCurrentIndex()
             }
-//            else if command == "speaker number one" {
-////                WKInterfaceController.openParentApplication(["setActive": "2-1:true"], reply: {(reply, error) -> Void in
-//////                    if let eventCreated = reply["setActive"] as? NSNumber {
-//////
-//////                    }
-////                })
-//                HKWControlHandler.sharedInstance().addDeviceToSession(3)
-//                
-//            }
+            else if command == "turn on speaker one" {
+                let deviceId:String = "2-1:true"
+                WKInterfaceController.openParentApplication(["setActive": deviceId], reply: {(reply, error) -> Void in
+//                    if let eventCreated = reply["setActive"] as? NSNumber {
+//
+//                    }
+                })
+            }
+            else if command == "turn off speaker one" {
+                let deviceId:String = "2-1:false"
+                WKInterfaceController.openParentApplication(["setActive": deviceId], reply: {(reply, error) -> Void in
+                    //                    if let eventCreated = reply["setActive"] as? NSNumber {
+                    //
+                    //                    }
+                })
+            }
+            else if command == "turn on speaker two" || command == "turn on speaker to" {
+                let deviceId:String = "2-3:true"
+                WKInterfaceController.openParentApplication(["setActive": deviceId], reply: {(reply, error) -> Void in
+                    //                    if let eventCreated = reply["setActive"] as? NSNumber {
+                    //
+                    //                    }
+                })
+            }
+            else if command == "turn off speaker two" || command == "turn off speaker to"  {
+                let deviceId:String = "2-3:false"
+                WKInterfaceController.openParentApplication(["setActive": deviceId], reply: {(reply, error) -> Void in
+                    //                    if let eventCreated = reply["setActive"] as? NSNumber {
+                    //
+                    //                    }
+                })
+            }
+            else if command == "turn on speaker three" {
+                let deviceId:String = "2-4:true"
+                WKInterfaceController.openParentApplication(["setActive": deviceId], reply: {(reply, error) -> Void in
+                    //                    if let eventCreated = reply["setActive"] as? NSNumber {
+                    //
+                    //                    }
+                })
+            }
+            else if command == "turn off speaker three" {
+                let deviceId:String = "2-4:false"
+                WKInterfaceController.openParentApplication(["setActive": deviceId], reply: {(reply, error) -> Void in
+                    //                    if let eventCreated = reply["setActive"] as? NSNumber {
+                    //
+                    //                    }
+                })
+            }
             
         }
     }

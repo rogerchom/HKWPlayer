@@ -27,7 +27,9 @@ class NowPlayingWKIC: WKInterfaceController {
     @IBOutlet var timeLabel: WKInterfaceLabel!
     
     var playItem: Playlist!
-    
+    var volume:Float = 25.0
+    var isMuted:Bool = false
+    var premuteVolume:Float = 0.0
     var timeElapsed = 0
     var totalTimeStr: String!
     
@@ -164,11 +166,53 @@ class NowPlayingWKIC: WKInterfaceController {
     
     @IBAction func volumeChanged(value: Float) {
         println("volume: \(value)")
+        volume = value
         WKInterfaceController.openParentApplication(["setVolume": NSNumber(float: value)], reply: {(reply, error) -> Void in
             if let eventCreated = reply["setVolume"] as? NSNumber {
 
             }
         })
+    }
+    
+    @IBAction func voiceCommand() {
+        presentTextInputControllerWithSuggestions(nil, allowedInputMode: .AllowEmoji){
+            (input) -> Void in
+            println("INPUT: \(input)")
+            var command = input[0] as! String
+            command = command.lowercaseString
+            if command == "mute" {
+                self.premuteVolume = self.volume
+                self.volumeChanged(0)
+                self.isMuted = true
+            }
+            else if command == "unmute" {
+                self.volumeChanged(self.premuteVolume)
+                self.isMuted = false
+            }
+            else if command == "volume up" {
+                self.volume = self.volume + 10
+                self.volumeChanged(self.volume)
+            }
+            else if command == "volume down" {
+                self.volume = self.volume - 10
+                self.volumeChanged(self.volume)
+            }
+            else if command == "next" {
+                self.fastForwardPressed()
+            }
+            else if command == "previous" {
+                self.timeElapsed = 0
+                g_currentIndex--
+                if g_currentIndex < 0 {
+                    g_currentIndex = g_playList.count - 1
+                }
+                self.playItem = g_playList[g_currentIndex]
+                self.configureUI(self.playItem)
+                
+                self.playCurrentIndex()
+            }
+            
+        }
     }
     
     func playCurrentIndex() {

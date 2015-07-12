@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Playlist-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="PlaylistView" title="Playlist" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="HKWPlayer_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="bBN-ey-P7k">
+                            <items>
+                                <tableRow identifier="SongRow" id="j4j-Ds-4HS" customClass="SongRowController" customModule="HKWPlayer_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="43.5" alignment="left" id="tqi-Ed-8Gl">
+                                        <items>
+                                            <imageView width="32" height="32" alignment="left" verticalAlignment="center" id="uC6-r8-RmW"/>
+                                            <group width="1" alignment="left" layout="vertical" id="tTF-Hd-not">
+                                                <items>
+                                                    <label width="95" alignment="left" text="Title" id="UQG-35-Esa">
+                                                        <fontDescription key="font" type="system" pointSize="16"/>
+                                                    </label>
+                                                    <label width="94" alignment="left" text="Artist" id="VcZ-yh-eDp">
+                                                        <fontDescription key="font" type="system" pointSize="12"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="itemArtist" destination="VcZ-yh-eDp" id="v4U-IH-Wy8"/>
+                                        <outlet property="itemImage" destination="uC6-r8-RmW" id="04c-Td-czq"/>
+                                        <outlet property="itemTitle" destination="UQG-35-Esa" id="BRI-Rn-cN1"/>
+                                        <segue destination="eek-Cg-toq" kind="push" id="6gE-0n-WOr"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="bBN-ey-P7k" id="Ufg-VU-Nc3"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="164" y="217"/>
+        </scene>
+        <!--Now Playing-->
+        <scene sceneID="oKJ-Kr-CGe">
+            <objects>
+                <controller identifier="NowPlayingView" title="Now Playing" id="eek-Cg-toq" customClass="NowPlayingWKIC" customModule="HKWPlayer_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="8rz-LJ-pW6">
+                            <items>
+                                <label width="1" alignment="left" text="Title" id="7o4-Bo-kS6">
+                                    <fontDescription key="font" type="system" pointSize="19"/>
+                                </label>
+                                <group width="1" alignment="center" id="tV9-Eh-AWc">
+                                    <items>
+                                        <button width="0.29999999999999999" height="1" alignment="right" backgroundImage="speaker_fc2" id="Mdp-Bb-Gbt">
+                                            <connections>
+                                                <segue destination="Fsd-SO-yNG" kind="push" id="iZk-t7-OUX"/>
+                                            </connections>
+                                        </button>
+                                        <group width="0.70000000000000007" height="38" alignment="left" layout="vertical" id="2Qk-NZ-Ljj">
+                                            <items>
+                                                <label width="1" alignment="left" text="Artist" id="dGz-tE-9b2">
+                                                    <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                </label>
+                                                <label width="1" alignment="left" text="00:00/00:00" id="kps-EP-nRT">
+                                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="vpz-mY-xDd">
+                            <items>
+                                <button width="32" height="32" alignment="left" verticalAlignment="center" backgroundImage="fast_rewind" id="iw3-8S-Qjm">
+                                    <connections>
+                                        <action selector="rewindPressed" destination="eek-Cg-toq" id="3Mt-gu-7pp"/>
+                                    </connections>
+                                </button>
+                                <button width="48" height="48" alignment="center" verticalAlignment="center" backgroundImage="play_white" id="69K-DM-0ho">
+                                    <connections>
+                                        <action selector="playPressed" destination="eek-Cg-toq" id="6ZG-LE-xVw"/>
+                                    </connections>
+                                </button>
+                                <button width="32" height="32" alignment="right" verticalAlignment="center" backgroundImage="fast_forward_white" id="peG-nl-c73">
+                                    <connections>
+                                        <action selector="fastForwardPressed" destination="eek-Cg-toq" id="30K-Nj-3Nb"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <slider width="1" height="47" alignment="left" verticalAlignment="bottom" value="25" maximum="50" steps="25" id="Gbo-aV-AH4">
+                            <connections>
+                                <action selector="volumeChanged:" destination="eek-Cg-toq" id="hZs-po-LOo"/>
+                            </connections>
+                        </slider>
+                    </items>
+                    <connections>
+                        <outlet property="artistWKLabel" destination="dGz-tE-9b2" id="PdI-eG-MUK"/>
+                        <outlet property="fastForwardWKBtn" destination="peG-nl-c73" id="hZI-v6-V6J"/>
+                        <outlet property="playWKBtn" destination="69K-DM-0ho" id="fES-YA-xFM"/>
+                        <outlet property="rewindWKBtn" destination="iw3-8S-Qjm" id="Md1-Em-u00"/>
+                        <outlet property="timeLabel" destination="kps-EP-nRT" id="LNi-VZ-tJB"/>
+                        <outlet property="titleWKLabel" destination="7o4-Bo-kS6" id="jYX-RO-vW5"/>
+                        <outlet property="volumeSlide" destination="Gbo-aV-AH4" id="ga4-S7-MgP"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="368" y="224"/>
+        </scene>
+        <!--Speakers-->
+        <scene sceneID="8aN-sb-MMf">
+            <objects>
+                <controller identifier="SpeakerListView" title="Speakers" id="Fsd-SO-yNG" customClass="SpeakerWKIC" customModule="HKWPlayer_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="4Bh-bg-VWE">
+                            <items>
+                                <tableRow identifier="SpeakerInfoRow" id="Kr2-4L-e6y" customClass="SpeakerRowController" customModule="HKWPlayer_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="146.5" alignment="left" layout="vertical" id="7Dg-Q0-NHv">
+                                        <items>
+                                            <group width="1" alignment="left" id="kPl-gy-qQC">
+                                                <items>
+                                                    <imageView width="0.30000000000000016" height="36" alignment="left" verticalAlignment="center" id="14v-gI-Uod"/>
+                                                    <group width="0.70000000000000007" alignment="right" verticalAlignment="center" layout="vertical" id="KaA-Gy-ELc">
+                                                        <items>
+                                                            <label width="1" alignment="left" text="Label" id="RrL-3D-WaL">
+                                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                                            </label>
+                                                            <label width="1" alignment="left" text="Label" id="HCc-j5-py2">
+                                                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                            </label>
+                                                        </items>
+                                                    </group>
+                                                </items>
+                                            </group>
+                                            <switch width="1" height="37" alignment="left" value="YES" title="Active" id="YbK-Dr-dZC">
+                                                <connections>
+                                                    <action selector="speakerSwitchChanged:" destination="Kr2-4L-e6y" id="Gdp-MW-wRD"/>
+                                                </connections>
+                                            </switch>
+                                            <slider width="1" height="53" alignment="left" verticalAlignment="center" value="20" maximum="50" steps="25" id="Xgb-aY-1gJ">
+                                                <connections>
+                                                    <action selector="speakeVolumeChanged:" destination="Kr2-4L-e6y" id="trY-BR-Ziu"/>
+                                                </connections>
+                                            </slider>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="speakerGroupName" destination="HCc-j5-py2" id="Fil-AG-0UJ"/>
+                                        <outlet property="speakerImage" destination="14v-gI-Uod" id="2bB-0v-GNQ"/>
+                                        <outlet property="speakerNameLabel" destination="RrL-3D-WaL" id="eM1-WS-AC1"/>
+                                        <outlet property="speakerSwitch" destination="YbK-Dr-dZC" id="jC2-SW-8PK"/>
+                                        <outlet property="speakerVolumeSlide" destination="Xgb-aY-1gJ" id="AlA-WR-zPG"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="4Bh-bg-VWE" id="5QA-gF-L3d"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="583" y="217"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="rjY-Ar-IMT">
+            <objects>
+                <glanceController spacing="0.0" id="Sv0-Ai-Zie" customClass="GlanceController" customModule="HKWPlayer_WatchKit_Extension">
+                    <items>
+                        <group alignment="left" id="gv7-I2-MZq">
+                            <items>
+                                <imageView width="40" height="40" alignment="left" verticalAlignment="bottom" image="speaker_fc1" id="fak-WJ-BS2"/>
+                                <label width="0.80000000000000004" alignment="left" verticalAlignment="center" text="HKWPlayer" id="P2H-oZ-AF5">
+                                    <fontDescription key="font" type="system" pointSize="19"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group alignment="left" layout="vertical" id="eew-Gs-W6Y">
+                            <items>
+                                <group width="1" alignment="left" id="oqv-TN-xld">
+                                    <items>
+                                        <imageView width="48" height="48" alignment="left" id="pvy-5U-xac"/>
+                                        <label width="84" height="44" alignment="center" verticalAlignment="center" text="Status" textAlignment="center" numberOfLines="2" id="h3v-yZ-NCg">
+                                            <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="19"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <label width="1" alignment="center" text="Title" textAlignment="center" id="siJ-on-VKt">
+                                    <fontDescription key="font" type="system" pointSize="20"/>
+                                </label>
+                                <label width="1" alignment="center" text="Artist" textAlignment="center" id="U3N-bc-UTU">
+                                    <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="16"/>
+                                </label>
+                            </items>
+                        </group>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                    <connections>
+                        <outlet property="artistLabel" destination="U3N-bc-UTU" id="pJK-3F-ptZ"/>
+                        <outlet property="artworkImage" destination="pvy-5U-xac" id="yEA-6w-Wom"/>
+                        <outlet property="statusLabel" destination="h3v-yZ-NCg" id="qyT-y9-UW5"/>
+                        <outlet property="titleLabel" destination="siJ-on-VKt" id="pOA-66-jRW"/>
+                    </connections>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="164" y="514"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,992 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		762267361B351D7E002A90A5 /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 762267351B351D7E002A90A5 /* libbz2.dylib */; };
+		762267381B351D87002A90A5 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 762267371B351D87002A90A5 /* libz.dylib */; };
+		7622673A1B3532D9002A90A5 /* MyStreamingServiceTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762267391B3532D9002A90A5 /* MyStreamingServiceTVC.swift */; };
+		7622673C1B3539F5002A90A5 /* MixRadioTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7622673B1B3539F5002A90A5 /* MixRadioTVC.swift */; };
+		7640722B1A9D2FE800983803 /* MMPSilence.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7640722A1A9D2FE800983803 /* MMPSilence.wav */; };
+		765E2D8B1A809CA40044EE19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E2D8A1A809CA40044EE19 /* AppDelegate.swift */; };
+		765E2D931A809CA40044EE19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 765E2D911A809CA40044EE19 /* Main.storyboard */; };
+		765E2D951A809CA40044EE19 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 765E2D941A809CA40044EE19 /* Images.xcassets */; };
+		765E2D981A809CA40044EE19 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765E2D961A809CA40044EE19 /* LaunchScreen.xib */; };
+		765E2DA41A809CA40044EE19 /* HKWPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E2DA31A809CA40044EE19 /* HKWPlayerTests.swift */; };
+		765E2DC71A809D060044EE19 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E2DAD1A809D060044EE19 /* AboutVC.swift */; };
+		765E2DC91A809D060044EE19 /* MenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E2DB01A809D060044EE19 /* MenuTVC.swift */; };
+		765E2DCA1A809D060044EE19 /* NowPlayingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E2DB11A809D060044EE19 /* NowPlayingVC.swift */; };
+		765E2DCB1A809D060044EE19 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E2DB21A809D060044EE19 /* Playlist.swift */; };
+		765E2DCC1A809D060044EE19 /* PlaylistTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E2DB31A809D060044EE19 /* PlaylistTVC.swift */; };
+		765E2DCD1A809D060044EE19 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 765E2DB61A809D060044EE19 /* RECommonFunctions.m */; };
+		765E2DCE1A809D060044EE19 /* REFrostedContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765E2DB81A809D060044EE19 /* REFrostedContainerViewController.m */; };
+		765E2DCF1A809D060044EE19 /* REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765E2DBA1A809D060044EE19 /* REFrostedViewController.m */; };
+		765E2DD01A809D060044EE19 /* UIImage+REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765E2DBC1A809D060044EE19 /* UIImage+REFrostedViewController.m */; };
+		765E2DD11A809D060044EE19 /* UIView+REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765E2DBE1A809D060044EE19 /* UIView+REFrostedViewController.m */; };
+		765E2DD21A809D060044EE19 /* UIViewController+REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765E2DC01A809D060044EE19 /* UIViewController+REFrostedViewController.m */; };
+		765E2DD31A809D060044EE19 /* RootNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E2DC11A809D060044EE19 /* RootNC.swift */; };
+		765E2DD41A809D060044EE19 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E2DC21A809D060044EE19 /* RootViewController.swift */; };
+		765E2DD61A809D060044EE19 /* SpeakerSettingTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E2DC41A809D060044EE19 /* SpeakerSettingTVC.swift */; };
+		766429BA1B35EDD500B729F6 /* SpeakerInfoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766429B91B35EDD500B729F6 /* SpeakerInfoTVC.swift */; };
+		766A11681B0A7BC600E76483 /* MMWormhole.m in Sources */ = {isa = PBXBuildFile; fileRef = 766A11671B0A7BC600E76483 /* MMWormhole.m */; };
+		766A116E1B0A94B700E76483 /* MMWormhole.m in Sources */ = {isa = PBXBuildFile; fileRef = 766A116D1B0A94B700E76483 /* MMWormhole.m */; };
+		766A116F1B0A963700E76483 /* libHKWirelessHD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E7E3821AFBEC85007E93B2 /* libHKWirelessHD.a */; };
+		768BF2011AFC1F6600D344BD /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768BF2001AFC1F6600D344BD /* Playlist.swift */; };
+		768BF2031AFC3DBC00D344BD /* NowPlayingWKIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768BF2021AFC3DBC00D344BD /* NowPlayingWKIC.swift */; };
+		768FB50C1B354AF700A23EB2 /* NowStreamingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768FB50B1B354AF700A23EB2 /* NowStreamingVC.swift */; };
+		769E06D91AE0CFFA001E6F86 /* PlaylistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769E06D81AE0CFFA001E6F86 /* PlaylistTableViewCell.swift */; };
+		769E06DC1AE0D171001E6F86 /* HKWPlayer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 769E06DA1AE0D171001E6F86 /* HKWPlayer.xcdatamodeld */; };
+		769E06DE1AE0D340001E6F86 /* StreamingActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769E06DD1AE0D340001E6F86 /* StreamingActivityView.swift */; };
+		76E67D401AE579750022F5A6 /* SpeakerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E67D3F1AE579750022F5A6 /* SpeakerTableViewCell.swift */; };
+		76E7E3001AFB12E3007E93B2 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7E2FF1AFB12E3007E93B2 /* InterfaceController.swift */; };
+		76E7E3021AFB12E3007E93B2 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7E3011AFB12E3007E93B2 /* GlanceController.swift */; };
+		76E7E3041AFB12E3007E93B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76E7E3031AFB12E3007E93B2 /* Images.xcassets */; };
+		76E7E3081AFB12E3007E93B2 /* HKWPlayer WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 76E7E3071AFB12E3007E93B2 /* HKWPlayer WatchKit App.app */; };
+		76E7E3101AFB12E3007E93B2 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76E7E30E1AFB12E3007E93B2 /* Interface.storyboard */; };
+		76E7E3121AFB12E3007E93B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76E7E3111AFB12E3007E93B2 /* Images.xcassets */; };
+		76E7E3151AFB12E3007E93B2 /* HKWPlayer WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 76E7E2FB1AFB12E3007E93B2 /* HKWPlayer WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		76E7E31E1AFB1841007E93B2 /* SongRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7E31D1AFB1841007E93B2 /* SongRowController.swift */; };
+		76ED14411AFC9BB300AA3C62 /* SpeakerWKIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ED14401AFC9BB200AA3C62 /* SpeakerWKIC.swift */; };
+		76ED14431AFC9D7500AA3C62 /* SpeakerRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ED14421AFC9D7500AA3C62 /* SpeakerRowController.swift */; };
+		76ED144D1AFECBE200AA3C62 /* SpeakerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ED144C1AFECBE200AA3C62 /* SpeakerInfo.swift */; };
+		76F32D9B1A947EC200444777 /* MMPDeepSleepPreventer.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F32D9A1A947EC200444777 /* MMPDeepSleepPreventer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		765E2D9E1A809CA40044EE19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 765E2D7D1A809CA40044EE19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 765E2D841A809CA40044EE19;
+			remoteInfo = HKWPlayer;
+		};
+		76E7E3091AFB12E3007E93B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 765E2D7D1A809CA40044EE19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76E7E3061AFB12E3007E93B2;
+			remoteInfo = "HKWPlayer WatchKit App";
+		};
+		76E7E3131AFB12E3007E93B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 765E2D7D1A809CA40044EE19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76E7E2FA1AFB12E3007E93B2;
+			remoteInfo = "HKWPlayer WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		76E7E31C1AFB12E3007E93B2 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				76E7E3151AFB12E3007E93B2 /* HKWPlayer WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		762267351B351D7E002A90A5 /* libbz2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.dylib; path = usr/lib/libbz2.dylib; sourceTree = SDKROOT; };
+		762267371B351D87002A90A5 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		762267391B3532D9002A90A5 /* MyStreamingServiceTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStreamingServiceTVC.swift; sourceTree = "<group>"; };
+		7622673B1B3539F5002A90A5 /* MixRadioTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixRadioTVC.swift; sourceTree = "<group>"; };
+		7640722A1A9D2FE800983803 /* MMPSilence.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = MMPSilence.wav; sourceTree = "<group>"; };
+		765E2D851A809CA40044EE19 /* HKWPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HKWPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		765E2D891A809CA40044EE19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		765E2D8A1A809CA40044EE19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		765E2D921A809CA40044EE19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		765E2D941A809CA40044EE19 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		765E2D971A809CA40044EE19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		765E2D9D1A809CA40044EE19 /* HKWPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HKWPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		765E2DA21A809CA40044EE19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		765E2DA31A809CA40044EE19 /* HKWPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKWPlayerTests.swift; sourceTree = "<group>"; };
+		765E2DAD1A809D060044EE19 /* AboutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		765E2DAF1A809D060044EE19 /* HKWPlayer-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HKWPlayer-Bridging-Header.h"; sourceTree = "<group>"; };
+		765E2DB01A809D060044EE19 /* MenuTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTVC.swift; sourceTree = "<group>"; };
+		765E2DB11A809D060044EE19 /* NowPlayingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowPlayingVC.swift; sourceTree = "<group>"; };
+		765E2DB21A809D060044EE19 /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
+		765E2DB31A809D060044EE19 /* PlaylistTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistTVC.swift; sourceTree = "<group>"; };
+		765E2DB51A809D060044EE19 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
+		765E2DB61A809D060044EE19 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
+		765E2DB71A809D060044EE19 /* REFrostedContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REFrostedContainerViewController.h; sourceTree = "<group>"; };
+		765E2DB81A809D060044EE19 /* REFrostedContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REFrostedContainerViewController.m; sourceTree = "<group>"; };
+		765E2DB91A809D060044EE19 /* REFrostedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REFrostedViewController.h; sourceTree = "<group>"; };
+		765E2DBA1A809D060044EE19 /* REFrostedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REFrostedViewController.m; sourceTree = "<group>"; };
+		765E2DBB1A809D060044EE19 /* UIImage+REFrostedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+REFrostedViewController.h"; sourceTree = "<group>"; };
+		765E2DBC1A809D060044EE19 /* UIImage+REFrostedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+REFrostedViewController.m"; sourceTree = "<group>"; };
+		765E2DBD1A809D060044EE19 /* UIView+REFrostedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+REFrostedViewController.h"; sourceTree = "<group>"; };
+		765E2DBE1A809D060044EE19 /* UIView+REFrostedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+REFrostedViewController.m"; sourceTree = "<group>"; };
+		765E2DBF1A809D060044EE19 /* UIViewController+REFrostedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+REFrostedViewController.h"; sourceTree = "<group>"; };
+		765E2DC01A809D060044EE19 /* UIViewController+REFrostedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+REFrostedViewController.m"; sourceTree = "<group>"; };
+		765E2DC11A809D060044EE19 /* RootNC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootNC.swift; sourceTree = "<group>"; };
+		765E2DC21A809D060044EE19 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		765E2DC41A809D060044EE19 /* SpeakerSettingTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerSettingTVC.swift; sourceTree = "<group>"; };
+		766429B91B35EDD500B729F6 /* SpeakerInfoTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerInfoTVC.swift; sourceTree = "<group>"; };
+		766A11661B0A7BC600E76483 /* MMWormhole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormhole.h; sourceTree = "<group>"; };
+		766A11671B0A7BC600E76483 /* MMWormhole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWormhole.m; sourceTree = "<group>"; };
+		766A116B1B0A94B600E76483 /* HKWPlayer WatchKit Extension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HKWPlayer WatchKit Extension-Bridging-Header.h"; sourceTree = "<group>"; };
+		766A116C1B0A94B700E76483 /* MMWormhole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormhole.h; sourceTree = "<group>"; };
+		766A116D1B0A94B700E76483 /* MMWormhole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWormhole.m; sourceTree = "<group>"; };
+		768BF1FE1AFC0D9B00D344BD /* HKWPlayer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HKWPlayer.entitlements; sourceTree = "<group>"; };
+		768BF2001AFC1F6600D344BD /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
+		768BF2021AFC3DBC00D344BD /* NowPlayingWKIC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowPlayingWKIC.swift; sourceTree = "<group>"; };
+		768FB50B1B354AF700A23EB2 /* NowStreamingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowStreamingVC.swift; sourceTree = "<group>"; };
+		769E06D81AE0CFFA001E6F86 /* PlaylistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistTableViewCell.swift; sourceTree = "<group>"; };
+		769E06DB1AE0D171001E6F86 /* FCPlayer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FCPlayer.xcdatamodel; sourceTree = "<group>"; };
+		769E06DD1AE0D340001E6F86 /* StreamingActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamingActivityView.swift; sourceTree = "<group>"; };
+		76E67D3F1AE579750022F5A6 /* SpeakerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerTableViewCell.swift; sourceTree = "<group>"; };
+		76E7E2FB1AFB12E3007E93B2 /* HKWPlayer WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "HKWPlayer WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76E7E2FE1AFB12E3007E93B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76E7E2FF1AFB12E3007E93B2 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		76E7E3011AFB12E3007E93B2 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		76E7E3031AFB12E3007E93B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		76E7E3071AFB12E3007E93B2 /* HKWPlayer WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HKWPlayer WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76E7E30D1AFB12E3007E93B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76E7E30F1AFB12E3007E93B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		76E7E3111AFB12E3007E93B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		76E7E31D1AFB1841007E93B2 /* SongRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongRowController.swift; sourceTree = "<group>"; };
+		76E7E37C1AFBEC85007E93B2 /* DeviceGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceGroup.h; sourceTree = "<group>"; };
+		76E7E37D1AFBEC85007E93B2 /* DeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceInfo.h; sourceTree = "<group>"; };
+		76E7E37E1AFBEC85007E93B2 /* HKWControlHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKWControlHandler.h; sourceTree = "<group>"; };
+		76E7E37F1AFBEC85007E93B2 /* HKWDeviceEventHandlerSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKWDeviceEventHandlerSingleton.h; sourceTree = "<group>"; };
+		76E7E3801AFBEC85007E93B2 /* HKWPlayerEventHandlerSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKWPlayerEventHandlerSingleton.h; sourceTree = "<group>"; };
+		76E7E3821AFBEC85007E93B2 /* libHKWirelessHD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libHKWirelessHD.a; sourceTree = "<group>"; };
+		76ED143F1AFC787900AA3C62 /* HKWPlayer WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "HKWPlayer WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		76ED14401AFC9BB200AA3C62 /* SpeakerWKIC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerWKIC.swift; sourceTree = "<group>"; };
+		76ED14421AFC9D7500AA3C62 /* SpeakerRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerRowController.swift; sourceTree = "<group>"; };
+		76ED144C1AFECBE200AA3C62 /* SpeakerInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerInfo.swift; sourceTree = "<group>"; };
+		76F32D991A947EC200444777 /* MMPDeepSleepPreventer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMPDeepSleepPreventer.h; sourceTree = "<group>"; };
+		76F32D9A1A947EC200444777 /* MMPDeepSleepPreventer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMPDeepSleepPreventer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		765E2D821A809CA40044EE19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				762267381B351D87002A90A5 /* libz.dylib in Frameworks */,
+				762267361B351D7E002A90A5 /* libbz2.dylib in Frameworks */,
+				766A116F1B0A963700E76483 /* libHKWirelessHD.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		765E2D9A1A809CA40044EE19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76E7E2F81AFB12E3007E93B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		765E2D7C1A809CA40044EE19 = {
+			isa = PBXGroup;
+			children = (
+				762267371B351D87002A90A5 /* libz.dylib */,
+				762267351B351D7E002A90A5 /* libbz2.dylib */,
+				76E7E37A1AFBEC85007E93B2 /* HKWirelessHDSDK */,
+				765E2D871A809CA40044EE19 /* HKWPlayer */,
+				765E2DA01A809CA40044EE19 /* HKWPlayerTests */,
+				76E7E2FC1AFB12E3007E93B2 /* HKWPlayer WatchKit Extension */,
+				76E7E30B1AFB12E3007E93B2 /* HKWPlayer WatchKit App */,
+				765E2D861A809CA40044EE19 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		765E2D861A809CA40044EE19 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				765E2D851A809CA40044EE19 /* HKWPlayer.app */,
+				765E2D9D1A809CA40044EE19 /* HKWPlayerTests.xctest */,
+				76E7E2FB1AFB12E3007E93B2 /* HKWPlayer WatchKit Extension.appex */,
+				76E7E3071AFB12E3007E93B2 /* HKWPlayer WatchKit App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		765E2D871A809CA40044EE19 /* HKWPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				768BF1FE1AFC0D9B00D344BD /* HKWPlayer.entitlements */,
+				765E2D8A1A809CA40044EE19 /* AppDelegate.swift */,
+				765E2D911A809CA40044EE19 /* Main.storyboard */,
+				765E2DAD1A809D060044EE19 /* AboutVC.swift */,
+				76E67D3F1AE579750022F5A6 /* SpeakerTableViewCell.swift */,
+				76F32D991A947EC200444777 /* MMPDeepSleepPreventer.h */,
+				76F32D9A1A947EC200444777 /* MMPDeepSleepPreventer.m */,
+				766A11661B0A7BC600E76483 /* MMWormhole.h */,
+				766A11671B0A7BC600E76483 /* MMWormhole.m */,
+				765E2DAF1A809D060044EE19 /* HKWPlayer-Bridging-Header.h */,
+				769E06D81AE0CFFA001E6F86 /* PlaylistTableViewCell.swift */,
+				765E2DB01A809D060044EE19 /* MenuTVC.swift */,
+				765E2DB11A809D060044EE19 /* NowPlayingVC.swift */,
+				765E2DB21A809D060044EE19 /* Playlist.swift */,
+				765E2DB31A809D060044EE19 /* PlaylistTVC.swift */,
+				765E2DB41A809D060044EE19 /* REFrostedViewController */,
+				765E2DC11A809D060044EE19 /* RootNC.swift */,
+				769E06DD1AE0D340001E6F86 /* StreamingActivityView.swift */,
+				765E2DC21A809D060044EE19 /* RootViewController.swift */,
+				768FB50B1B354AF700A23EB2 /* NowStreamingVC.swift */,
+				7622673B1B3539F5002A90A5 /* MixRadioTVC.swift */,
+				762267391B3532D9002A90A5 /* MyStreamingServiceTVC.swift */,
+				766429B91B35EDD500B729F6 /* SpeakerInfoTVC.swift */,
+				765E2DC41A809D060044EE19 /* SpeakerSettingTVC.swift */,
+				765E2D941A809CA40044EE19 /* Images.xcassets */,
+				765E2D961A809CA40044EE19 /* LaunchScreen.xib */,
+				769E06DA1AE0D171001E6F86 /* HKWPlayer.xcdatamodeld */,
+				765E2D881A809CA40044EE19 /* Supporting Files */,
+			);
+			path = HKWPlayer;
+			sourceTree = "<group>";
+		};
+		765E2D881A809CA40044EE19 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7640722A1A9D2FE800983803 /* MMPSilence.wav */,
+				765E2D891A809CA40044EE19 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		765E2DA01A809CA40044EE19 /* HKWPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				765E2DA31A809CA40044EE19 /* HKWPlayerTests.swift */,
+				765E2DA11A809CA40044EE19 /* Supporting Files */,
+			);
+			path = HKWPlayerTests;
+			sourceTree = "<group>";
+		};
+		765E2DA11A809CA40044EE19 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				765E2DA21A809CA40044EE19 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		765E2DB41A809D060044EE19 /* REFrostedViewController */ = {
+			isa = PBXGroup;
+			children = (
+				765E2DB51A809D060044EE19 /* RECommonFunctions.h */,
+				765E2DB61A809D060044EE19 /* RECommonFunctions.m */,
+				765E2DB71A809D060044EE19 /* REFrostedContainerViewController.h */,
+				765E2DB81A809D060044EE19 /* REFrostedContainerViewController.m */,
+				765E2DB91A809D060044EE19 /* REFrostedViewController.h */,
+				765E2DBA1A809D060044EE19 /* REFrostedViewController.m */,
+				765E2DBB1A809D060044EE19 /* UIImage+REFrostedViewController.h */,
+				765E2DBC1A809D060044EE19 /* UIImage+REFrostedViewController.m */,
+				765E2DBD1A809D060044EE19 /* UIView+REFrostedViewController.h */,
+				765E2DBE1A809D060044EE19 /* UIView+REFrostedViewController.m */,
+				765E2DBF1A809D060044EE19 /* UIViewController+REFrostedViewController.h */,
+				765E2DC01A809D060044EE19 /* UIViewController+REFrostedViewController.m */,
+			);
+			path = REFrostedViewController;
+			sourceTree = "<group>";
+		};
+		76E7E2FC1AFB12E3007E93B2 /* HKWPlayer WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				76ED143F1AFC787900AA3C62 /* HKWPlayer WatchKit Extension.entitlements */,
+				76E7E2FF1AFB12E3007E93B2 /* InterfaceController.swift */,
+				76ED14421AFC9D7500AA3C62 /* SpeakerRowController.swift */,
+				766A116C1B0A94B700E76483 /* MMWormhole.h */,
+				766A116D1B0A94B700E76483 /* MMWormhole.m */,
+				76ED144C1AFECBE200AA3C62 /* SpeakerInfo.swift */,
+				76ED14401AFC9BB200AA3C62 /* SpeakerWKIC.swift */,
+				768BF2021AFC3DBC00D344BD /* NowPlayingWKIC.swift */,
+				768BF2001AFC1F6600D344BD /* Playlist.swift */,
+				76E7E31D1AFB1841007E93B2 /* SongRowController.swift */,
+				76E7E3011AFB12E3007E93B2 /* GlanceController.swift */,
+				76E7E3031AFB12E3007E93B2 /* Images.xcassets */,
+				76E7E2FD1AFB12E3007E93B2 /* Supporting Files */,
+				766A116B1B0A94B600E76483 /* HKWPlayer WatchKit Extension-Bridging-Header.h */,
+			);
+			path = "HKWPlayer WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		76E7E2FD1AFB12E3007E93B2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				76E7E2FE1AFB12E3007E93B2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		76E7E30B1AFB12E3007E93B2 /* HKWPlayer WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				76E7E30E1AFB12E3007E93B2 /* Interface.storyboard */,
+				76E7E3111AFB12E3007E93B2 /* Images.xcassets */,
+				76E7E30C1AFB12E3007E93B2 /* Supporting Files */,
+			);
+			path = "HKWPlayer WatchKit App";
+			sourceTree = "<group>";
+		};
+		76E7E30C1AFB12E3007E93B2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				76E7E30D1AFB12E3007E93B2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		76E7E37A1AFBEC85007E93B2 /* HKWirelessHDSDK */ = {
+			isa = PBXGroup;
+			children = (
+				76E7E37B1AFBEC85007E93B2 /* include */,
+				76E7E3811AFBEC85007E93B2 /* lib */,
+			);
+			path = HKWirelessHDSDK;
+			sourceTree = "<group>";
+		};
+		76E7E37B1AFBEC85007E93B2 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				76E7E37C1AFBEC85007E93B2 /* DeviceGroup.h */,
+				76E7E37D1AFBEC85007E93B2 /* DeviceInfo.h */,
+				76E7E37E1AFBEC85007E93B2 /* HKWControlHandler.h */,
+				76E7E37F1AFBEC85007E93B2 /* HKWDeviceEventHandlerSingleton.h */,
+				76E7E3801AFBEC85007E93B2 /* HKWPlayerEventHandlerSingleton.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		76E7E3811AFBEC85007E93B2 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				76E7E3821AFBEC85007E93B2 /* libHKWirelessHD.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		765E2D841A809CA40044EE19 /* HKWPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 765E2DA71A809CA40044EE19 /* Build configuration list for PBXNativeTarget "HKWPlayer" */;
+			buildPhases = (
+				765E2D811A809CA40044EE19 /* Sources */,
+				765E2D821A809CA40044EE19 /* Frameworks */,
+				765E2D831A809CA40044EE19 /* Resources */,
+				76E7E31C1AFB12E3007E93B2 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76E7E3141AFB12E3007E93B2 /* PBXTargetDependency */,
+			);
+			name = HKWPlayer;
+			productName = HKWPlayer;
+			productReference = 765E2D851A809CA40044EE19 /* HKWPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		765E2D9C1A809CA40044EE19 /* HKWPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 765E2DAA1A809CA40044EE19 /* Build configuration list for PBXNativeTarget "HKWPlayerTests" */;
+			buildPhases = (
+				765E2D991A809CA40044EE19 /* Sources */,
+				765E2D9A1A809CA40044EE19 /* Frameworks */,
+				765E2D9B1A809CA40044EE19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				765E2D9F1A809CA40044EE19 /* PBXTargetDependency */,
+			);
+			name = HKWPlayerTests;
+			productName = HKWPlayerTests;
+			productReference = 765E2D9D1A809CA40044EE19 /* HKWPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		76E7E2FA1AFB12E3007E93B2 /* HKWPlayer WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76E7E3191AFB12E3007E93B2 /* Build configuration list for PBXNativeTarget "HKWPlayer WatchKit Extension" */;
+			buildPhases = (
+				76E7E2F71AFB12E3007E93B2 /* Sources */,
+				76E7E2F81AFB12E3007E93B2 /* Frameworks */,
+				76E7E2F91AFB12E3007E93B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76E7E30A1AFB12E3007E93B2 /* PBXTargetDependency */,
+			);
+			name = "HKWPlayer WatchKit Extension";
+			productName = "HKWPlayer WatchKit Extension";
+			productReference = 76E7E2FB1AFB12E3007E93B2 /* HKWPlayer WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		76E7E3061AFB12E3007E93B2 /* HKWPlayer WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76E7E3161AFB12E3007E93B2 /* Build configuration list for PBXNativeTarget "HKWPlayer WatchKit App" */;
+			buildPhases = (
+				76E7E3051AFB12E3007E93B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HKWPlayer WatchKit App";
+			productName = "HKWPlayer WatchKit App";
+			productReference = 76E7E3071AFB12E3007E93B2 /* HKWPlayer WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		765E2D7D1A809CA40044EE19 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Harman International";
+				TargetAttributes = {
+					765E2D841A809CA40044EE19 = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 5CLZ86DHD8;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					765E2D9C1A809CA40044EE19 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 765E2D841A809CA40044EE19;
+					};
+					76E7E2FA1AFB12E3007E93B2 = {
+						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 5CLZ86DHD8;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					76E7E3061AFB12E3007E93B2 = {
+						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 5CLZ86DHD8;
+					};
+				};
+			};
+			buildConfigurationList = 765E2D801A809CA40044EE19 /* Build configuration list for PBXProject "HKWPlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 765E2D7C1A809CA40044EE19;
+			productRefGroup = 765E2D861A809CA40044EE19 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				765E2D841A809CA40044EE19 /* HKWPlayer */,
+				765E2D9C1A809CA40044EE19 /* HKWPlayerTests */,
+				76E7E2FA1AFB12E3007E93B2 /* HKWPlayer WatchKit Extension */,
+				76E7E3061AFB12E3007E93B2 /* HKWPlayer WatchKit App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		765E2D831A809CA40044EE19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				765E2D931A809CA40044EE19 /* Main.storyboard in Resources */,
+				765E2D981A809CA40044EE19 /* LaunchScreen.xib in Resources */,
+				7640722B1A9D2FE800983803 /* MMPSilence.wav in Resources */,
+				765E2D951A809CA40044EE19 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		765E2D9B1A809CA40044EE19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76E7E2F91AFB12E3007E93B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76E7E3081AFB12E3007E93B2 /* HKWPlayer WatchKit App.app in Resources */,
+				76E7E3041AFB12E3007E93B2 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76E7E3051AFB12E3007E93B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76E7E3101AFB12E3007E93B2 /* Interface.storyboard in Resources */,
+				76E7E3121AFB12E3007E93B2 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		765E2D811A809CA40044EE19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				765E2DD61A809D060044EE19 /* SpeakerSettingTVC.swift in Sources */,
+				765E2DCA1A809D060044EE19 /* NowPlayingVC.swift in Sources */,
+				765E2DCD1A809D060044EE19 /* RECommonFunctions.m in Sources */,
+				765E2D8B1A809CA40044EE19 /* AppDelegate.swift in Sources */,
+				765E2DC91A809D060044EE19 /* MenuTVC.swift in Sources */,
+				765E2DCC1A809D060044EE19 /* PlaylistTVC.swift in Sources */,
+				765E2DD11A809D060044EE19 /* UIView+REFrostedViewController.m in Sources */,
+				769E06DC1AE0D171001E6F86 /* HKWPlayer.xcdatamodeld in Sources */,
+				766429BA1B35EDD500B729F6 /* SpeakerInfoTVC.swift in Sources */,
+				765E2DD41A809D060044EE19 /* RootViewController.swift in Sources */,
+				768FB50C1B354AF700A23EB2 /* NowStreamingVC.swift in Sources */,
+				765E2DCF1A809D060044EE19 /* REFrostedViewController.m in Sources */,
+				765E2DCE1A809D060044EE19 /* REFrostedContainerViewController.m in Sources */,
+				765E2DD01A809D060044EE19 /* UIImage+REFrostedViewController.m in Sources */,
+				766A11681B0A7BC600E76483 /* MMWormhole.m in Sources */,
+				76E67D401AE579750022F5A6 /* SpeakerTableViewCell.swift in Sources */,
+				769E06DE1AE0D340001E6F86 /* StreamingActivityView.swift in Sources */,
+				765E2DCB1A809D060044EE19 /* Playlist.swift in Sources */,
+				765E2DD21A809D060044EE19 /* UIViewController+REFrostedViewController.m in Sources */,
+				765E2DC71A809D060044EE19 /* AboutVC.swift in Sources */,
+				769E06D91AE0CFFA001E6F86 /* PlaylistTableViewCell.swift in Sources */,
+				765E2DD31A809D060044EE19 /* RootNC.swift in Sources */,
+				76F32D9B1A947EC200444777 /* MMPDeepSleepPreventer.m in Sources */,
+				7622673C1B3539F5002A90A5 /* MixRadioTVC.swift in Sources */,
+				7622673A1B3532D9002A90A5 /* MyStreamingServiceTVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		765E2D991A809CA40044EE19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				765E2DA41A809CA40044EE19 /* HKWPlayerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76E7E2F71AFB12E3007E93B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76E7E31E1AFB1841007E93B2 /* SongRowController.swift in Sources */,
+				768BF2031AFC3DBC00D344BD /* NowPlayingWKIC.swift in Sources */,
+				76E7E3001AFB12E3007E93B2 /* InterfaceController.swift in Sources */,
+				76ED144D1AFECBE200AA3C62 /* SpeakerInfo.swift in Sources */,
+				76E7E3021AFB12E3007E93B2 /* GlanceController.swift in Sources */,
+				766A116E1B0A94B700E76483 /* MMWormhole.m in Sources */,
+				768BF2011AFC1F6600D344BD /* Playlist.swift in Sources */,
+				76ED14431AFC9D7500AA3C62 /* SpeakerRowController.swift in Sources */,
+				76ED14411AFC9BB300AA3C62 /* SpeakerWKIC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		765E2D9F1A809CA40044EE19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 765E2D841A809CA40044EE19 /* HKWPlayer */;
+			targetProxy = 765E2D9E1A809CA40044EE19 /* PBXContainerItemProxy */;
+		};
+		76E7E30A1AFB12E3007E93B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76E7E3061AFB12E3007E93B2 /* HKWPlayer WatchKit App */;
+			targetProxy = 76E7E3091AFB12E3007E93B2 /* PBXContainerItemProxy */;
+		};
+		76E7E3141AFB12E3007E93B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76E7E2FA1AFB12E3007E93B2 /* HKWPlayer WatchKit Extension */;
+			targetProxy = 76E7E3131AFB12E3007E93B2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		765E2D911A809CA40044EE19 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				765E2D921A809CA40044EE19 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		765E2D961A809CA40044EE19 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				765E2D971A809CA40044EE19 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		76E7E30E1AFB12E3007E93B2 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76E7E30F1AFB12E3007E93B2 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		765E2DA51A809CA40044EE19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"DEBUG_LOG=1",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "../platform/Ios/Debug/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LIBRARY_SEARCH_PATHS = (
+					"../platform/Ios/Debug/lib/FC/**",
+					../platform/Ios/Debug/lib/FCPlatform,
+					../platform/Ios/Debug/lib/wavpacktiny,
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lstdc++";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "HKWPlayer/HKWPlayer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		765E2DA61A809CA40044EE19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "../platform/Ios/Debug/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LIBRARY_SEARCH_PATHS = (
+					"../platform/Ios/Debug/lib/FC/**",
+					../platform/Ios/Debug/lib/FCPlatform,
+					../platform/Ios/Debug/lib/wavpacktiny,
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-lstdc++";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "HKWPlayer/HKWPlayer-Bridging-Header.h";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		765E2DA81A809CA40044EE19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = HKWPlayer/HKWPlayer.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = HKWPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/HKWirelessHDSDK/lib";
+				OTHER_LDFLAGS = "-lstdc++";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "e89f78bf-2538-4369-b564-068ac83e60d7";
+				VALID_ARCHS = "armv7 armv7s arm64";
+			};
+			name = Debug;
+		};
+		765E2DA91A809CA40044EE19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = HKWPlayer/HKWPlayer.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = HKWPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/HKWirelessHDSDK/lib";
+				OTHER_LDFLAGS = "-lstdc++";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "e89f78bf-2538-4369-b564-068ac83e60d7";
+				VALID_ARCHS = "armv7 armv7s arm64";
+			};
+			name = Release;
+		};
+		765E2DAB1A809CA40044EE19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Trevor Deng (PPP6JYBQNS)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HKWPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HKWPlayer.app/HKWPlayer";
+			};
+			name = Debug;
+		};
+		765E2DAC1A809CA40044EE19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Trevor Deng (PPP6JYBQNS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Trevor Deng (PPP6JYBQNS)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HKWPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HKWPlayer.app/HKWPlayer";
+			};
+			name = Release;
+		};
+		76E7E3171AFB12E3007E93B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Trevor Deng (PPP6JYBQNS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = HKWPlayer_WatchKit_Extension;
+				INFOPLIST_FILE = "HKWPlayer WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "baab0965-2fdf-4381-ade7-8d9465861d24";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		76E7E3181AFB12E3007E93B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Trevor Deng (PPP6JYBQNS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = HKWPlayer_WatchKit_Extension;
+				INFOPLIST_FILE = "HKWPlayer WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "baab0965-2fdf-4381-ade7-8d9465861d24";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		76E7E31A1AFB12E3007E93B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "HKWPlayer WatchKit Extension/HKWPlayer WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Trevor Deng (PPP6JYBQNS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "HKWPlayer WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/HKWPlayer",
+					WatchKit,
+				);
+				OTHER_LDFLAGS = "-lstdc++";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "14fb0ae7-2a60-417a-baec-1d7be2008cd2";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "HKWPlayer WatchKit Extension/HKWPlayer WatchKit Extension-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		76E7E31B1AFB12E3007E93B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "HKWPlayer WatchKit Extension/HKWPlayer WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Trevor Deng (PPP6JYBQNS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "HKWPlayer WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/HKWPlayer",
+					WatchKit,
+				);
+				OTHER_LDFLAGS = "-lstdc++";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "14fb0ae7-2a60-417a-baec-1d7be2008cd2";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "HKWPlayer WatchKit Extension/HKWPlayer WatchKit Extension-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		765E2D801A809CA40044EE19 /* Build configuration list for PBXProject "HKWPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				765E2DA51A809CA40044EE19 /* Debug */,
+				765E2DA61A809CA40044EE19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		765E2DA71A809CA40044EE19 /* Build configuration list for PBXNativeTarget "HKWPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				765E2DA81A809CA40044EE19 /* Debug */,
+				765E2DA91A809CA40044EE19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		765E2DAA1A809CA40044EE19 /* Build configuration list for PBXNativeTarget "HKWPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				765E2DAB1A809CA40044EE19 /* Debug */,
+				765E2DAC1A809CA40044EE19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76E7E3161AFB12E3007E93B2 /* Build configuration list for PBXNativeTarget "HKWPlayer WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76E7E3171AFB12E3007E93B2 /* Debug */,
+				76E7E3181AFB12E3007E93B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76E7E3191AFB12E3007E93B2 /* Build configuration list for PBXNativeTarget "HKWPlayer WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76E7E31A1AFB12E3007E93B2 /* Debug */,
+				76E7E31B1AFB12E3007E93B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		769E06DA1AE0D171001E6F86 /* HKWPlayer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				769E06DB1AE0D171001E6F86 /* FCPlayer.xcdatamodel */,
+			);
+			currentVersion = 769E06DB1AE0D171001E6F86 /* FCPlayer.xcdatamodel */;
+			path = HKWPlayer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 765E2D7D1A809CA40044EE19 /* Project object */;
+}

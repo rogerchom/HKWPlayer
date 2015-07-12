@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "0630"
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "76E7E3061AFB12E3007E93B2"
+               BuildableName = "HKWPlayer WatchKit App.app"
+               BlueprintName = "HKWPlayer WatchKit App"
+               ReferencedContainer = "container:HKWPlayer.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "765E2D841A809CA40044EE19"
+               BuildableName = "HKWPlayer.app"
+               BlueprintName = "HKWPlayer"
+               ReferencedContainer = "container:HKWPlayer.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "76E7E2FA1AFB12E3007E93B2"
+               BuildableName = "HKWPlayer WatchKit Extension.appex"
+               BlueprintName = "HKWPlayer WatchKit Extension"
+               ReferencedContainer = "container:HKWPlayer.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      buildConfiguration = "Debug">
+      <Testables>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "76E7E3061AFB12E3007E93B2"
+            BuildableName = "HKWPlayer WatchKit App.app"
+            BlueprintName = "HKWPlayer WatchKit App"
+            ReferencedContainer = "container:HKWPlayer.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </TestAction>
+   <LaunchAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      allowLocationSimulation = "YES">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/HKWPlayer">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "76E7E3061AFB12E3007E93B2"
+            BuildableName = "HKWPlayer WatchKit App.app"
+            BlueprintName = "HKWPlayer WatchKit App"
+            ReferencedContainer = "container:HKWPlayer.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "76E7E3061AFB12E3007E93B2"
+            BuildableName = "HKWPlayer WatchKit App.app"
+            BlueprintName = "HKWPlayer WatchKit App"
+            ReferencedContainer = "container:HKWPlayer.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Release"
+      debugDocumentVersioning = "YES"
+      launchAutomaticallySubstyle = "4">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/HKWPlayer">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "76E7E3061AFB12E3007E93B2"
+            BuildableName = "HKWPlayer WatchKit App.app"
+            BlueprintName = "HKWPlayer WatchKit App"
+            ReferencedContainer = "container:HKWPlayer.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "76E7E3061AFB12E3007E93B2"
+            BuildableName = "HKWPlayer WatchKit App.app"
+            BlueprintName = "HKWPlayer WatchKit App"
+            ReferencedContainer = "container:HKWPlayer.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

@@ -34,6 +34,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, HKWDeviceEventHandlerDele
         // prevent from turning into background
         sleepPreventer = MMPDeepSleepPreventer()
         sleepPreventer.startPreventSleep()
+        
+        // TEST
+        var bundleRoot = NSBundle.mainBundle().bundlePath
+        var dirContents: NSArray = NSFileManager.defaultManager().contentsOfDirectoryAtPath(bundleRoot, error: nil)!
+        var fltr: NSPredicate = NSPredicate(format: "self ENDSWITH '.wav'")
+        var g_wavFiles = dirContents.filteredArrayUsingPredicate(fltr) as! [String]
+        println("WAV FILES: " + g_wavFiles[1])
 
         return true
     }
@@ -224,10 +231,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate, HKWDeviceEventHandlerDele
 
             reply(["getIsPlaying": NSNumber(bool: HKWControlHandler.sharedInstance().isPlaying())])
         }  else if let value = userInfo?["playBark"] as? NSString {
+
+            playSound("dog_bark.wav")
+            eventCreated = true
+            reply(["playBark": NSNumber(bool: eventCreated)])
+            
+        }  else if let value = userInfo?["playApplause"] as? NSString {
+            
+            playSound("applause.wav")
+            eventCreated = true
+            reply(["playApplause": NSNumber(bool: eventCreated)])
             
         }
 
         
+    }
+    
+    func playSound(soundFile: String) {
+        
+        let wavFilePath = NSBundle.mainBundle().bundlePath.stringByAppendingPathComponent(soundFile)
+        let assetUrl = NSURL(fileURLWithPath: wavFilePath)
+        
+        HKWControlHandler.sharedInstance().stop()
+        if HKWControlHandler.sharedInstance().playCAF(assetUrl, songName: soundFile, resumeFlag: false) {
+            println("playing")
+            g_playInitiatedByWatch = true
+        } else {
+            println("error in playing")
+        }
     }
 
     func convertStringToCLongLong(deviceIDStr: String) -> CLongLong {

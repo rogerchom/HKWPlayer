@@ -283,6 +283,22 @@ class NowPlayingWKIC: WKInterfaceController {
                     //                    }
                 })
             }
+            else if command == "intruder" {
+                let parameters:String = ""
+                WKInterfaceController.openParentApplication(["playBark": parameters], reply: {(reply, error) -> Void in
+                    //                    if let eventCreated = reply["setActive"] as? NSNumber {
+                    //
+                    //                    }
+                })
+            }
+            else if command == "applause" {
+                let parameters:String = ""
+                WKInterfaceController.openParentApplication(["playApplause": parameters], reply: {(reply, error) -> Void in
+                    //                    if let eventCreated = reply["setActive"] as? NSNumber {
+                    //
+                    //                    }
+                })
+            }
             
         }
     }

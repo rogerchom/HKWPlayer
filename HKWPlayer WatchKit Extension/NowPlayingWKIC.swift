@@ -283,6 +283,14 @@ class NowPlayingWKIC: WKInterfaceController {
                     //                    }
                 })
             }
+            else if command == "play something relaxing" {
+                let parameters:String = ""
+                WKInterfaceController.openParentApplication(["playWater": parameters], reply: {(reply, error) -> Void in
+                    //                    if let eventCreated = reply["setActive"] as? NSNumber {
+                    //
+                    //                    }
+                })
+            }
             else if command == "intruder" {
                 let parameters:String = ""
                 WKInterfaceController.openParentApplication(["playBark": parameters], reply: {(reply, error) -> Void in

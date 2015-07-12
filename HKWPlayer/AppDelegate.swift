@@ -236,6 +236,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, HKWDeviceEventHandlerDele
             eventCreated = true
             reply(["playBark": NSNumber(bool: eventCreated)])
             
+        }  else if let value = userInfo?["playWater"] as? NSString {
+            
+            playSound("water.wav")
+            eventCreated = true
+            reply(["playWater": NSNumber(bool: eventCreated)])
+            
         }  else if let value = userInfo?["playApplause"] as? NSString {
             
             playSound("applause.wav")

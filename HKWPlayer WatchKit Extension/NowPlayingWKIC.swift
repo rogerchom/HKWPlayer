@@ -27,7 +27,9 @@ class NowPlayingWKIC: WKInterfaceController {
     @IBOutlet var timeLabel: WKInterfaceLabel!
     
     var playItem: Playlist!
-    
+    var volume:Float = 25.0
+    var isMuted:Bool = false
+    var premuteVolume:Float = 0.0
     var timeElapsed = 0
     var totalTimeStr: String!
     
@@ -164,11 +166,149 @@ class NowPlayingWKIC: WKInterfaceController {
     
     @IBAction func volumeChanged(value: Float) {
         println("volume: \(value)")
+        volume = value
         WKInterfaceController.openParentApplication(["setVolume": NSNumber(float: value)], reply: {(reply, error) -> Void in
             if let eventCreated = reply["setVolume"] as? NSNumber {
 
             }
         })
+    }
+    
+    @IBAction func voiceCommand() {
+        presentTextInputControllerWithSuggestions(nil, allowedInputMode: .AllowEmoji){
+            (input) -> Void in
+            println("INPUT: \(input)")
+            var command = input[0] as! String
+            command = command.lowercaseString
+            if command == "mute" || command == "meet" {
+                self.premuteVolume = self.volume
+                self.volumeChanged(0)
+                self.isMuted = true
+            }
+            else if command == "unmute" || command == "on mute" {
+                self.volumeChanged(self.premuteVolume)
+                self.isMuted = false
+            }
+            else if command == "volume up" {
+                self.volume = self.volume + 10
+                self.volumeChanged(self.volume)
+            }
+            else if command == "volume down" {
+                self.volume = self.volume - 10
+                self.volumeChanged(self.volume)
+            }
+            else if command == "next" {
+                self.fastForwardPressed()
+            }
+            else if command == "previous" {
+                self.timeElapsed = 0
+                g_currentIndex--
+                if g_currentIndex < 0 {
+                    g_currentIndex = g_playList.count - 1
+                }
+                self.playItem = g_playList[g_currentIndex]
+                self.configureUI(self.playItem)
+                
+                self.playCurrentIndex()
+            }
+            else if command == "track number one" {
+                g_currentIndex = 0
+                self.playItem = g_playList[g_currentIndex]
+                self.configureUI(self.playItem)
+                self.playCurrentIndex()
+            }
+            else if command == "track number two" {
+                g_currentIndex = 1
+                self.playItem = g_playList[g_currentIndex]
+                self.configureUI(self.playItem)
+                self.playCurrentIndex()
+            }
+            else if command == "track number three" {
+                g_currentIndex = 2
+                self.playItem = g_playList[g_currentIndex]
+                self.configureUI(self.playItem)
+                self.playCurrentIndex()
+            }
+            else if command == "track number four" {
+                g_currentIndex = 3
+                self.playItem = g_playList[g_currentIndex]
+                self.configureUI(self.playItem)
+                self.playCurrentIndex()
+            }
+            else if command == "turn on speaker one" {
+                let deviceId:String = "2-1:true"
+                WKInterfaceController.openParentApplication(["setActive": deviceId], reply: {(reply, error) -> Void in
+//                    if let eventCreated = reply["setActive"] as? NSNumber {
+//
+//                    }
+                })
+            }
+            else if command == "turn off speaker one" {
+                let deviceId:String = "2-1:false"
+                WKInterfaceController.openParentApplication(["setActive": deviceId], reply: {(reply, error) -> Void in
+                    //                    if let eventCreated = reply["setActive"] as? NSNumber {
+                    //
+                    //                    }
+                })
+            }
+            else if command == "turn on speaker two" || command == "turn on speaker to" {
+                let deviceId:String = "2-3:true"
+                WKInterfaceController.openParentApplication(["setActive": deviceId], reply: {(reply, error) -> Void in
+                    //                    if let eventCreated = reply["setActive"] as? NSNumber {
+                    //
+                    //                    }
+                })
+            }
+            else if command == "turn off speaker two" || command == "turn off speaker to"  {
+                let deviceId:String = "2-3:false"
+                WKInterfaceController.openParentApplication(["setActive": deviceId], reply: {(reply, error) -> Void in
+                    //                    if let eventCreated = reply["setActive"] as? NSNumber {
+                    //
+                    //                    }
+                })
+            }
+            else if command == "turn on speaker three" {
+                let deviceId:String = "2-4:true"
+                WKInterfaceController.openParentApplication(["setActive": deviceId], reply: {(reply, error) -> Void in
+                    //                    if let eventCreated = reply["setActive"] as? NSNumber {
+                    //
+                    //                    }
+                })
+            }
+            else if command == "turn off speaker three" {
+                let deviceId:String = "2-4:false"
+                WKInterfaceController.openParentApplication(["setActive": deviceId], reply: {(reply, error) -> Void in
+                    //                    if let eventCreated = reply["setActive"] as? NSNumber {
+                    //
+                    //                    }
+                })
+            }
+            else if command == "play something relaxing" {
+                let parameters:String = ""
+                WKInterfaceController.openParentApplication(["playWater": parameters], reply: {(reply, error) -> Void in
+                    //                    if let eventCreated = reply["setActive"] as? NSNumber {
+                    //
+                    //                    }
+                })
+            }
+            else if command == "intruder" {
+                let parameters:String = ""
+                WKInterfaceController.openParentApplication(["playBark": parameters], reply: {(reply, error) -> Void in
+                    //                    if let eventCreated = reply["setActive"] as? NSNumber {
+                    //
+                    //                    }
+                })
+            }
+            else if command == "applause" {
+                let parameters:String = ""
+                WKInterfaceController.openParentApplication(["playApplause": parameters], reply: {(reply, error) -> Void in
+                    //                    if let eventCreated = reply["setActive"] as? NSNumber {
+                    //
+                    //                    }
+                })
+            }
+            
+        }
     }
     
     func playCurrentIndex() {

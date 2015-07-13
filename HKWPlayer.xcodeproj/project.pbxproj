@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5235A4731B52FD3D0034FA7B /* dog_bark2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5235A4721B52FD3D0034FA7B /* dog_bark2.wav */; };
+		5235A4751B53078B0034FA7B /* dog_bark.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5235A4741B53078B0034FA7B /* dog_bark.wav */; };
+		5235A4771B53097F0034FA7B /* applause.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5235A4761B53097F0034FA7B /* applause.wav */; };
+		5235A4791B530B170034FA7B /* water.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5235A4781B530B170034FA7B /* water.wav */; };
 		762267361B351D7E002A90A5 /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 762267351B351D7E002A90A5 /* libbz2.dylib */; };
 		762267381B351D87002A90A5 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 762267371B351D87002A90A5 /* libz.dylib */; };
 		7622673A1B3532D9002A90A5 /* MyStreamingServiceTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762267391B3532D9002A90A5 /* MyStreamingServiceTVC.swift */; };
@@ -95,6 +99,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5235A4721B52FD3D0034FA7B /* dog_bark2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dog_bark2.wav; sourceTree = "<group>"; };
+		5235A4741B53078B0034FA7B /* dog_bark.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dog_bark.wav; sourceTree = "<group>"; };
+		5235A4761B53097F0034FA7B /* applause.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = applause.wav; sourceTree = "<group>"; };
+		5235A4781B530B170034FA7B /* water.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = water.wav; sourceTree = "<group>"; };
 		762267351B351D7E002A90A5 /* libbz2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.dylib; path = usr/lib/libbz2.dylib; sourceTree = SDKROOT; };
 		762267371B351D87002A90A5 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		762267391B3532D9002A90A5 /* MyStreamingServiceTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStreamingServiceTVC.swift; sourceTree = "<group>"; };
@@ -224,6 +232,10 @@
 		765E2D871A809CA40044EE19 /* HKWPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				5235A4781B530B170034FA7B /* water.wav */,
+				5235A4761B53097F0034FA7B /* applause.wav */,
+				5235A4741B53078B0034FA7B /* dog_bark.wav */,
+				5235A4721B52FD3D0034FA7B /* dog_bark2.wav */,
 				768BF1FE1AFC0D9B00D344BD /* HKWPlayer.entitlements */,
 				765E2D8A1A809CA40044EE19 /* AppDelegate.swift */,
 				765E2D911A809CA40044EE19 /* Main.storyboard */,
@@ -517,7 +529,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				765E2D931A809CA40044EE19 /* Main.storyboard in Resources */,
+				5235A4771B53097F0034FA7B /* applause.wav in Resources */,
+				5235A4731B52FD3D0034FA7B /* dog_bark2.wav in Resources */,
 				765E2D981A809CA40044EE19 /* LaunchScreen.xib in Resources */,
+				5235A4791B530B170034FA7B /* water.wav in Resources */,
+				5235A4751B53078B0034FA7B /* dog_bark.wav in Resources */,
 				7640722B1A9D2FE800983803 /* MMPSilence.wav in Resources */,
 				765E2D951A809CA40044EE19 /* Images.xcassets in Resources */,
 			);

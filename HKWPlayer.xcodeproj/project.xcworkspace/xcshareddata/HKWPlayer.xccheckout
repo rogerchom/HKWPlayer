@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>7049CA87-6F53-4604-BD39-BA3DFE61E9E5</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>HKWPlayer</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>F73B40FAB7251972DD670618DEACF3E1623A5126</key>
 		<string>github.com:psytronx/HKWPlayer.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>HKWPlayer.xcodeproj/project.xcworkspace</string>
+	<string>HKWPlayer.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>F73B40FAB7251972DD670618DEACF3E1623A5126</key>
